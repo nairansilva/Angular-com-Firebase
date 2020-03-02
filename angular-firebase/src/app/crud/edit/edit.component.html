@@ -1,0 +1,30 @@
+<form  [formGroup]="formulario">
+    <div>
+        <mat-form-field class="example-full-width">
+
+            <mat-label>Marca</mat-label>
+            <input matInput formControlName="marca" placeholder="Marca da Fralda">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+
+            <mat-label>Modelo</mat-label>
+            <input matInput formControlName="modelo" placeholder="Modelo da Fralda">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+
+            <mat-label>Tamanho</mat-label>
+            <input matInput formControlName="tamanho" placeholder="Tamnho da Fralda">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+
+            <mat-label>Quantidade</mat-label>
+            <input matInput formControlName="quantidade" placeholder="Quantidade">
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" (click)="salvar()">Salvar</button>
+    </div>
+</form>

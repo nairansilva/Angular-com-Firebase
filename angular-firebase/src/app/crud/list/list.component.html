@@ -1,0 +1,65 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="marca">
+    <th mat-header-cell *matHeaderCellDef> Marca </th>
+    <td mat-cell *matCellDef="let element"> {{element.marca}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="modelo">
+    <th mat-header-cell *matHeaderCellDef> Modelo </th>
+    <td mat-cell *matCellDef="let element"> {{element.modelo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tamanho">
+    <th mat-header-cell *matHeaderCellDef> Tamanho </th>
+    <td mat-cell *matCellDef="let element"> {{element.tamanho}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="quantidade">
+    <th mat-header-cell *matHeaderCellDef> Quantidade </th>
+    <td mat-cell *matCellDef="let element"> {{element.quantidade}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="editar">
+    <th mat-header-cell *matHeaderCellDef> Editar </th>
+    <td mat-cell *matCellDef="let row"> <button mat-raised-button color="basic" (click)="editar(row)">Editar</button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="excluir">
+    <th mat-header-cell *matHeaderCellDef> Excluir </th>
+    <td mat-cell *matCellDef="let row"><button mat-raised-button color="warn" (click)="excluir(row)">Excluir</button> </td>
+  </ng-container>
+  
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+<!-- <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="Marca">
+      <mat-header-cell *matHeaderCellDef> Marca </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.marcaForm}} </mat-cell>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="Modelo">
+      <mat-header-cell *matHeaderCellDef> Modelo </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.modeloForm}} </mat-cell>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="Tamanho">
+      <mat-header-cell *matHeaderCellDef> Tamanho </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.tamanhoForm}} </mat-cell>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="Quantidade">
+      <mat-header-cell *matHeaderCellDef> Quantidade </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.quantidadeForm}} </mat-cell>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </mat-table> -->
